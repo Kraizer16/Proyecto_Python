@@ -6,8 +6,6 @@ acmeEducation = {}
 archivo = "Proyecto/acmeEducation.json"
 acmeEducation = cargar(archivo)
 
-
-
 acmeEducation = Inicio_sesion(acmeEducation, archivo)
 
 

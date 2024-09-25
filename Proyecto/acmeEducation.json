@@ -1,1 +1,395 @@
-{"Grupos": {"c4": {"Nombre": "Python Lovers", "Sigla ": "PL4", "Integrantes": {"01": "Marlon", "02": "Sara}", "03": "Jorge", "04": "Jose"}, "cod_Integrantes": ["01", "02", "03", "04"], "num_Integrantes": 4}, "m1": {"Nombre": "Java Lovers", "Sigla ": "JL1"}, "j2": {"Nombre": "C lovers", "Sigla ": "CL2"}}, "Modulos": {"01": {"Nombre": "Ingles", "Duracion Semanas": 4, "Fecha Inicio": "29/09/2024", "Fecha Fin": "27/10/2024", "Hora Inicio": "00:30", "Hora Fin": "17:00", "Integrantes": {"01": "Marlon", "02": "Sara}", "03": "Jorge", "04": "Jose"}, "Docente/s": {"37705895": {"Nombre": "Vannesa", "Estudiantes_Asignados": 4, "Estudiantes_Asignados_List": ["01", "02", "03", "04"]}, "1098407324": {"Nombre": "Orbin", "Estudiantes_Asignados": 0}, "99999999999": {"Nombre": "Lupita", "Estudiantes_Asignados": 0}}, "Asistencia": {"24/09/2024": {"01": {"Hora de Llegada": "01:01", "Hora de Salida": "01:03"}, "02": {"Hora de Llegada": "01:03", "Hora de Salida": "01:03"}}}}, "02": {"Nombre": "Ser", "Duracion Semanas": 4, "Fecha Inicio": "29/09/2024", "Fecha Fin": "27/10/2024", "Hora Inicio": "17:00", "Hora Fin": "18:00", "Integrantes": {"01": "Marlon", "04": "Jose"}, "Docente/s": {"37705895": {"Nombre": "Vannesa", "Estudiantes_Asignados": 2, "Estudiantes_Asignados_List": ["01", "04"]}, "99999999999": {"Nombre": "Lupita", "Estudiantes_Asignados": 0}}}, "03": {"Nombre": "Skills", "Duracion Semanas": 4, "Fecha Inicio": "29/09/2024", "Fecha Fin": "27/10/2024", "Hora Inicio": "18:15", "Hora Fin": "21:15", "Integrantes": {"01": "Marlon", "02": "Sara}", "04": "Jose"}, "Docente/s": {"1098408325": {"Nombre": "Carlos", "Estudiantes_Asignados": 3, "Estudiantes_Asignados_List": ["01", "02", "04"]}, "99999999999": {"Nombre": "Lupita", "Estudiantes_Asignados": 0}}}}, "Estudiantes": {"01": {"Nombre": "Marlon", "Sexo": "M", "edad": 17}, "02": {"Nombre": "Sara}", "Sexo": "f", "edad": 15}, "03": {"Nombre": "Jorge", "Sexo": "M", "edad": 18}, "04": {"Nombre": "Jose", "Sexo": "M", "edad": 16}}, "Docentes": {"37705895": {"Nombre": "Vannesa", "Estudiantes_Asignados": 0}, "1098407324": {"Nombre": "Orbin", "Estudiantes_Asignados": 0}, "1098408325": {"Nombre": "Carlos", "Estudiantes_Asignados": 0}, "99999999999": {"Nombre": "Lupita", "Estudiantes_Asignados": 3}}, "Usuario": {"Marlon": {"contrase": "38ee8486ab98b6b22a54b305d02d574c926269f19315a5a3b460be61f1d551e1"}}}
+{
+    "Grupos": {
+        "c4": {
+            "Nombre": "Python Lovers",
+            "Sigla ": "PL4",
+            "Integrantes": {
+                "01": "Marlon",
+                "02": "Sara",
+                "03": "Jorge",
+                "04": "Jose",
+                "05": "Luis",
+                "06": "Ana",
+                "07": "Carlos",
+                "08": "Lucia",
+                "09": "Diego",
+                "10": "Elena",
+                "11": "Mario",
+                "12": "Andrea",
+                "13": "Sofia",
+                "14": "Pablo",
+                "15": "Gabriela",
+                "16": "Ricardo",
+                "17": "Diana",
+                "18": "Felipe",
+                "19": "Isabel",
+                "20": "Sergio"
+            },
+            "cod_Integrantes": [
+                "01",
+                "02",
+                "03",
+                "04",
+                "05",
+                "06",
+                "07",
+                "08",
+                "09",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "16",
+                "17",
+                "18",
+                "19",
+                "20"
+            ],
+            "num_Integrantes": 20
+        },
+        "m1": {
+            "Nombre": "Java Lovers",
+            "Sigla ": "JL1",
+            "Integrantes": {
+                "05": "Luis",
+                "06": "Ana",
+                "07": "Carlos",
+                "08": "Lucia"
+            },
+            "cod_Integrantes": [
+                "05",
+                "06",
+                "07",
+                "08"
+            ],
+            "num_Integrantes": 4
+        },
+        "j2": {
+            "Nombre": "C Lovers",
+            "Sigla ": "CL2",
+            "Integrantes": {
+                "09": "Diego",
+                "10": "Elena",
+                "11": "Mario",
+                "12": "Andrea"
+            },
+            "cod_Integrantes": [
+                "09",
+                "10",
+                "11",
+                "12"
+            ],
+            "num_Integrantes": 4
+        }
+    },
+    "Modulos": {
+        "01": {
+            "Nombre": "Ingles",
+            "Duracion Semanas": 4,
+            "Fecha Inicio": "01/10/2024",
+            "Fecha Fin": "30/10/2024",
+            "Hora Inicio": "09:00",
+            "Hora Fin": "11:00",
+            "Integrantes": {
+                "01": "Marlon",
+                "02": "Sara",
+                "03": "Jorge",
+                "04": "Jose"
+            },
+            "Docente/s": {
+                "37705895": {
+                    "Nombre": "Vannesa",
+                    "Estudiantes_Asignados": 4,
+                    "Estudiantes_Asignados_List": [
+                        "01",
+                        "02",
+                        "03",
+                        "04"
+                    ]
+                }
+            },
+            "Asistencia": {
+                "01/10/2024": {
+                    "01": {
+                        "Hora de Llegada": "09:10",
+                        "Hora de Salida": "10:50"
+                    },
+                    "02": {
+                        "Hora de Llegada": "09:05",
+                        "Hora de Salida": "11:00"
+                    }
+                },
+                "02/10/2024": {
+                    "01": {
+                        "Hora de Llegada": "09:20",
+                        "Hora de Salida": "10:55"
+                    },
+                    "03": {
+                        "Hora de Llegada": "09:00",
+                        "Hora de Salida": "11:00"
+                    }
+                }
+            },
+            "Informes": {
+                "EstudiantesTarde": [
+                    "01",
+                    "03"
+                ],
+                "EstudiantesRetiradosAntes": [
+                    "01"
+                ],
+                "EstudiantesSinFaltas": [
+                    "02",
+                    "04"
+                ]
+            }
+        },
+        "02": {
+            "Nombre": "Matemáticas",
+            "Duracion Semanas": 4,
+            "Fecha Inicio": "01/10/2024",
+            "Fecha Fin": "30/10/2024",
+            "Hora Inicio": "11:30",
+            "Hora Fin": "13:30",
+            "Integrantes": {
+                "01": "Marlon",
+                "05": "Luis",
+                "06": "Ana"
+            },
+            "Docente/s": {
+                "1098407324": {
+                    "Nombre": "Orbin",
+                    "Estudiantes_Asignados": 3,
+                    "Estudiantes_Asignados_List": [
+                        "01",
+                        "05",
+                        "06"
+                    ]
+                }
+            },
+            "Asistencia": {
+                "01/10/2024": {
+                    "01": {
+                        "Hora de Llegada": "11:35",
+                        "Hora de Salida": "13:30"
+                    },
+                    "05": {
+                        "Hora de Llegada": "11:30",
+                        "Hora de Salida": "13:25"
+                    },
+                    "06": {
+                        "Hora de Llegada": "11:40",
+                        "Hora de Salida": "13:20"
+                    }
+                },
+                "02/10/2024": {
+                    "05": {
+                        "Hora de Llegada": "11:32",
+                        "Hora de Salida": "13:30"
+                    }
+                }
+            },
+            "Informes": {
+                "EstudiantesTarde": [
+                    "01",
+                    "06"
+                ],
+                "EstudiantesRetiradosAntes": [
+                    "06"
+                ],
+                "EstudiantesSinFaltas": [
+                    "05"
+                ]
+            }
+        },
+        "03": {
+            "Nombre": "Programación",
+            "Duracion Semanas": 4,
+            "Fecha Inicio": "01/10/2024",
+            "Fecha Fin": "30/10/2024",
+            "Hora Inicio": "14:00",
+            "Hora Fin": "16:00",
+            "Integrantes": {
+                "02": "Sara",
+                "03": "Jorge",
+                "07": "Carlos",
+                "08": "Lucia"
+            },
+            "Docente/s": {
+                "99999999999": {
+                    "Nombre": "Lupita",
+                    "Estudiantes_Asignados": 4,
+                    "Estudiantes_Asignados_List": [
+                        "02",
+                        "03",
+                        "07",
+                        "08"
+                    ]
+                }
+            },
+            "Asistencia": {
+                "01/10/2024": {
+                    "02": {
+                        "Hora de Llegada": "14:10",
+                        "Hora de Salida": "15:55"
+                    },
+                    "03": {
+                        "Hora de Llegada": "14:00",
+                        "Hora de Salida": "16:00"
+                    },
+                    "07": {
+                        "Hora de Llegada": "14:05",
+                        "Hora de Salida": "15:50"
+                    }
+                },
+                "02/10/2024": {
+                    "08": {
+                        "Hora de Llegada": "14:00",
+                        "Hora de Salida": "16:00"
+                    },
+                    "02": {
+                        "Hora de Llegada": "14:12",
+                        "Hora de Salida": "15:58"
+                    }
+                }
+            },
+            "Informes": {
+                "EstudiantesTarde": [
+                    "02",
+                    "07"
+                ],
+                "EstudiantesSinFaltas": [
+                    "03",
+                    "08"
+                ]
+            }
+        }
+    },
+    "Estudiantes": {
+        "01": {
+            "Nombre": "Marlon",
+            "Sexo": "M",
+            "edad": 17
+        },
+        "02": {
+            "Nombre": "Sara",
+            "Sexo": "F",
+            "edad": 15
+        },
+        "03": {
+            "Nombre": "Jorge",
+            "Sexo": "M",
+            "edad": 18
+        },
+        "04": {
+            "Nombre": "Jose",
+            "Sexo": "M",
+            "edad": 16
+        },
+        "05": {
+            "Nombre": "Luis",
+            "Sexo": "M",
+            "edad": 19
+        },
+        "06": {
+            "Nombre": "Ana",
+            "Sexo": "F",
+            "edad": 17
+        },
+        "07": {
+            "Nombre": "Carlos",
+            "Sexo": "M",
+            "edad": 20
+        },
+        "08": {
+            "Nombre": "Lucia",
+            "Sexo": "F",
+            "edad": 21
+        },
+        "09": {
+            "Nombre": "Diego",
+            "Sexo": "M",
+            "edad": 22
+        },
+        "10": {
+            "Nombre": "Elena",
+            "Sexo": "F",
+            "edad": 23
+        },
+        "11": {
+            "Nombre": "Mario",
+            "Sexo": "M",
+            "edad": 24
+        },
+        "12": {
+            "Nombre": "Andrea",
+            "Sexo": "F",
+            "edad": 25
+        },
+        "13": {
+            "Nombre": "Sofia",
+            "Sexo": "F",
+            "edad": 18
+        },
+        "14": {
+            "Nombre": "Pablo",
+            "Sexo": "M",
+            "edad": 19
+        },
+        "15": {
+            "Nombre": "Gabriela",
+            "Sexo": "F",
+            "edad": 20
+        },
+        "16": {
+            "Nombre": "Ricardo",
+            "Sexo": "M",
+            "edad": 21
+        },
+        "17": {
+            "Nombre": "Diana",
+            "Sexo": "F",
+            "edad": 22
+        },
+        "18": {
+            "Nombre": "Felipe",
+            "Sexo": "M",
+            "edad": 23
+        },
+        "19": {
+            "Nombre": "Isabel",
+            "Sexo": "F",
+            "edad": 24
+        },
+        "20": {
+            "Nombre": "Sergio",
+            "Sexo": "M",
+            "edad": 25
+        }
+    },
+    "Docentes": {
+        "37705895": {
+            "Nombre": "Vannesa",
+            "Estudiantes_Asignados": 4
+        },
+        "1098407324": {
+            "Nombre": "Orbin",
+            "Estudiantes_Asignados": 3
+        },
+        "1098408325": {
+            "Nombre": "Carlos",
+            "Estudiantes_Asignados": 0
+        },
+        "99999999999": {
+            "Nombre": "Lupita",
+            "Estudiantes_Asignados": 4
+        }
+    },
+    "Usuario": {
+        "Marlon": {
+            "contrase": "c4aa39c9c54ac9034bae6f0bd95d24f5cf15ccffd1984a297182fab2e193f4d3"
+        }
+    }
+}

@@ -241,35 +241,51 @@ def estudiantes_se_retiraron_antes(lib, codMod, mes):
     return retirados_estudiantes
 
 
+
 def estudiantes_sin_faltas(lib, codMod, mes):
     arch = "Proyecto/acmeEducation.json"
     estudiantes_faltas = set()
     
+    # Iterar sobre las fechas de asistencia en el módulo
     for fecha, asistencia in lib["Modulos"][codMod].get("Asistencia", {}).items():
-        if fecha.split("/")[1] == mes:  # Verificar el mes
+        if fecha.split("/")[1] == mes:  # Verificar si la fecha corresponde al mes especificado
             for cod, datos in asistencia.items():
                 hora_inicio = datetime.strptime(lib["Modulos"][codMod]["Hora Inicio"], "%H:%M")
                 hora_fin = datetime.strptime(lib["Modulos"][codMod]["Hora Fin"], "%H:%M")
                 
-                # Verificar si llegó tarde
-                if "Hora de Llegada" in datos:
-                    hora_llegada = datetime.strptime(datos["Hora de Llegada"], "%H:%M")
-                    if hora_llegada > hora_inicio + timedelta(minutes=15):
-                        estudiantes_faltas.add(cod)
+                # Verificar si no registró la hora de llegada
+                if "Hora de Llegada" not in datos:
+                    estudiantes_faltas.add(cod)
+                    continue  # Saltar a la siguiente iteración ya que este estudiante tiene falta
+                
+                # Verificar si no registró la hora de salida
+                if "Hora de Salida" not in datos:
+                    estudiantes_faltas.add(cod)
+                    continue  # Saltar a la siguiente iteración ya que este estudiante tiene falta
 
-                # Verificar si se retiró temprano
-                if ("Hora de Salida" not in datos or
-                    (datetime.strptime(datos["Hora de Salida"], "%H:%M") < hora_fin - timedelta(minutes=10))):
+                # Verificar si llegó tarde (más de 15 minutos después de la hora de inicio)
+                hora_llegada = datetime.strptime(datos["Hora de Llegada"], "%H:%M")
+                if hora_llegada > hora_inicio + timedelta(minutes=15):
                     estudiantes_faltas.add(cod)
 
+                # Verificar si se retiró temprano (más de 10 minutos antes de la hora de fin)
+                hora_salida = datetime.strptime(datos["Hora de Salida"], "%H:%M")
+                if hora_salida < hora_fin - timedelta(minutes=10):
+                    estudiantes_faltas.add(cod)
+
+    # Obtener la lista de todos los estudiantes inscritos en el sistema
     todos_estudiantes = set(lib["Estudiantes"].keys())
+    
+    # Estudiantes que no tienen faltas son aquellos que no están en la lista de faltas
     sin_faltas = list(todos_estudiantes - estudiantes_faltas)
     
-    # Almacenar el resultado en el JSON
+    # Almacenar el informe de estudiantes sin faltas en el archivo JSON
     if "Informes" not in lib["Modulos"][codMod]:
         lib["Modulos"][codMod]["Informes"] = {}
     lib["Modulos"][codMod]["Informes"]["EstudiantesSinFaltas"] = sin_faltas
-    guardar(lib,arch)
+    
+    # Guardar los cambios en el archivo JSON
+    guardar(lib, arch)
     
     return sin_faltas
 
@@ -307,7 +323,6 @@ def porcentaje_asistencia_por_modulo(lib, codMod, mes):
     lib["Modulos"][codMod]["Informes"]["PorcentajeAsistencia"] = porcentaje
     guardar(lib,arch)
     return porcentaje
-
 
 
 def Inicio_sesion(lib, arch):
@@ -370,17 +385,14 @@ def Inicio_sesion(lib, arch):
 
 
 
-    
-    guardar(lib, arch)
-
-
      
-
-
+    guardar(lib, arch)
+    return lib
  
 
 def encriptar_contraseña(contraseña):
     return hashlib.sha256(contraseña.encode('utf-8')).hexdigest()
+
 
 def verificar_contraseña(contraseña_ingresada, hash_guardado):
     # Generar el hash de la contraseña ingresada
